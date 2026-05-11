@@ -1,6 +1,7 @@
 # Scripts Overview
 
-This directory contains runnable scripts and prompt configs for the CAREBench pipeline.
+This directory contains runnable scripts and prompt configs for the following paper:
+**CAREBench: Evaluating LLMs' Emotion Understanding by Assessing Cognitive Appraisal Reasoning**
 
 
 ## Scripts
