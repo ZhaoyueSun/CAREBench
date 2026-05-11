@@ -1,0 +1,138 @@
+[meta]
+version = "0.1"
+
+[templates.appraisals]
+user = """Instruction: Imagine you are the person who wrote the following story. Read it carefully and internalize the feelings and situation described. Please indicate how much the given statement reflects how you feel about the event. When answering, please think back to the moment when the events described in the story had just ended.
+My Situation: {scenario} {appraisal_text}
+Statement: {statement}
+Options:
+- Strongly disagree
+- Somewhat disagree
+- Neither agree nor disagree
+- Somewhat agree
+- Strongly agree
+Constraint: Respond only with one of the above labels. Do not provide any introductory text, explanation, or punctuation.
+My Answer:"""
+
+[templates.positive-level]
+user = """Instruction: Imagine you are the person who wrote the following story. Read it carefully and internalize the feelings and situation described. You have just finished experiencing these events. Answer the following reflection based on how you truly feel in that moment.
+My Situation: {scenario} {appraisal_text}
+Question: How positive did this situation make you feel?
+Options:
+- Not at all positive
+- Very slightly positive
+- Slightly positive
+- Moderately positive
+- Quite a bit positive
+- Very positive
+- Extremely positive
+Constraint: Respond only with one of the above labels. Do not provide any introductory text, explanation, or punctuation.
+My Answer:"""
+
+[templates.negative-level]
+user = """Instruction: Imagine you are the person who wrote the following story. Read it carefully and internalize the feelings and situation described. You have just finished experiencing these events. Answer the following reflection based on how you truly feel in that moment.
+My Situation: {scenario} {appraisal_text}
+Question: How negative did this situation make you feel?
+Options:
+- Not at all negative
+- Very slightly negative
+- Slightly negative
+- Moderately negative
+- Quite a bit negative
+- Very negative
+- Extremely negative
+Constraint: Respond only with one of the above labels. Do not provide any introductory text, explanation, or punctuation.
+My Answer:"""
+
+
+[templates.positive-labels]
+user = """Instruction: Imagine you are the person who wrote the following story. Read it carefully and internalize the feelings and situation described. You have just finished experiencing these events. Answer the following reflection based on how you truly feel in that moment.
+My Situation: {scenario} {appraisal_text}
+Question: Which of the following emotion groups did you experience in this situation?
+Options:
+- Hopeful, optimistic, encouraged
+- Grateful, appreciative, thankful
+- Glad, happy, joyful
+- Love, closeness, trust
+- Amused, entertained
+- Sympathy, concern, compassion
+- Inspiration, admiration, appreciation
+- Calm, peaceful, relaxed
+- Proud, confident, determined
+- Excited, enthusiastic, elated
+Constraint:
+1. If you did not feel any positive emotions, respond only with "None".
+2. If you experienced any of the above, list all applicable groups exactly as they are written, separated by a semicolon (;).
+3. Do not provide any introductory text, explanation, or punctuation outside of the list.
+My Answer:"""
+
+[templates.negative-labels]
+user = """Instruction: Imagine you are the person who wrote the following story. Read it carefully and internalize the feelings and situation described. You have just finished experiencing these events. Answer the following reflection based on how you truly feel in that moment.
+My Situation: {scenario} {appraisal_text}
+Question: Which of the following emotion groups did you experience in this situation?
+Options:
+- Angry, frustrated, annoyed
+- Worried, nervous, fearful
+- Sad, downhearted, unhappy
+- Disgust, distaste, revulsion
+- Despair, hopelessness, sorrow
+- Ashamed, humiliated, embarrassed
+- Lonely, isolated, disconnected from others
+- Panicked, alarmed, freaked out
+- Guilty, blameworthy, repentant
+- Confused, disoriented, surprised
+Constraint:
+1. If you did not feel any negative emotions, respond only with "None".
+2. If you experienced any of the above, list all applicable groups exactly as they are written, separated by a semicolon (;).
+3. Do not provide any introductory text, explanation, or punctuation outside of the list.
+My Answer:"""
+
+ 
+
+[label_maps.positive-level]
+"Not at all positive" = 0
+"Very slightly positive" = 1
+"Slightly positive" = 2
+"Moderately positive" = 3
+"Quite a bit positive" = 4
+"Very positive" = 5
+"Extremely positive" = 6
+
+[label_maps.negative-level]
+"Not at all negative" = 0
+"Very slightly negative" = 1
+"Slightly negative" = 2
+"Moderately negative" = 3
+"Quite a bit negative" = 4
+"Very negative" = 5
+"Extremely negative" = 6
+
+[label_options.negative-labels]
+values = [
+	"Angry, frustrated, annoyed",
+	"Worried, nervous, fearful",
+	"Sad, downhearted, unhappy",
+	"Disgust, distaste, revulsion",
+	"Despair, hopelessness, sorrow",
+	"Ashamed, humiliated, embarrassed",
+	"Lonely, isolated, disconnected from others",
+	"Panicked, alarmed, freaked out",
+	"Guilty, blameworthy, repentant",
+	"Confused, disoriented, surprised",
+]
+
+[label_options.positive-labels]
+values = [
+	"Hopeful, optimistic, encouraged",
+	"Grateful, appreciative, thankful",
+	"Glad, happy, joyful",
+	"Love, closeness, trust",
+	"Amused, entertained",
+	"Sympathy, concern, compassion",
+	"Inspiration, admiration, appreciation",
+	"Calm, peaceful, relaxed",
+	"Proud, confident, determined",
+	"Excited, enthusiastic, elated",
+]
+
+ 

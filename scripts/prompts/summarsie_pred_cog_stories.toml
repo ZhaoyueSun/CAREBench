@@ -1,0 +1,26 @@
+[templates.summarise]
+user = """Based on a user's answers to structured questions, your job is to write the key parts of what they said as a coherent narrative. It is important to captures their experience exactly as they described it. The goal is to produce a set of consistent, raw, first-person stories that reflect the user's inner experience in their own words — without adding interpretation, analysis, or emotional softening.
+
+Instructions
+• Use first-person voice throughout.
+• Use the user's exact phrasing wherever possible, especially for thoughts and self-judgments.
+• Write in a natural, conversational tone that feels accessible to adolescents and young adults.
+ 
+Your task:
+Create a scenario based on the following answers:
+
+Question: Summarise the previous story the user provided in 2 sentences.
+Answer: {previousStory}
+Question: Extract how much the event mattered to the user, and why.
+Answer: {relevance}
+Question: Extract in what ways the situation helped or hurt the user.
+Answer: {congruence}
+Question: Extract who or what the user felt was most responsible for all of this.
+Answer: {accountability}
+Question: Extract whether the user felt they were in control, and why.
+Answer: {control}
+Question: Extract whether things went as the user expected. If not, what was unexpected.
+Answer: {certainty}
+
+
+Output scenario:"""

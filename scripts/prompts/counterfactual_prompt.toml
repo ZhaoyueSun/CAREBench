@@ -1,0 +1,46 @@
+[meta]
+version = "0.1"
+
+[appraisals.dimension_to_statement]
+"relevance.general" = "This situation matters to me."
+"relevance.urgency" = "I need to do something about this situation right away."
+"relevance.goals" = "This situation relates to my goals and plans."
+"relevance.bodily motives" = "This situation relates to my physical well-being."
+"relevance.social motives" = "This situation involves people who matter to me."
+"relevance.identity motives" = "This situation concerns who I am and what I stand for."
+"certainty.construal" = "It is clear to me what is going on in this situation."
+"certainty.outlook" = "I know what will come next in this situation."
+"certainty.predictability" = "I saw this situation coming."
+"certainty.novelty" = "This is a new kind of situation for me."
+"congruence.general" = "This is a good situation."
+"congruence.outlook" = "This situation will get better with time."
+"congruence.positive prediction error" = "This situation is better than I expected."
+"congruence.negative prediction error" = "This situation is worse than I expected."
+"control.general" = "This situation is under my control."
+"control.select" = "I can decide whether to stay in this situation or leave it."
+"control.vicarious" = "Someone can handle this situation for me."
+"control.effortful" = "I have to exert effort in this situation."
+"accountability.self" = "I am responsible for this situation."
+"accountability.other" = "Someone else is responsible for this situation."
+"accountability.intentionality" = "This situation was caused intentionally."
+"accountability.fairness" = "This situation is fair and deserved."
+
+[templates.appraisals]
+user = """Instruction: Imagine you are the person who wrote the following story. Read it carefully and internalize the feelings and situation described. Please indicate how much the given statement reflects how you feel about the event. When answering, please think back to the moment when the events described in the story had just ended.
+My Situation: {scenario}
+Statement: {statement}
+Options:
+- Strongly disagree
+- Somewhat disagree
+- Neither agree nor disagree
+- Somewhat agree
+- Strongly agree
+Constraint: Respond only with one of the above labels. Do not provide any introductory text, explanation, or punctuation.
+My Answer:"""
+
+[label_maps.appraisals]
+"Strongly disagree" = 1
+"Somewhat disagree" = 2
+"Neither agree nor disagree" = 3
+"Somewhat agree" = 4
+"Strongly agree" = 5
