@@ -3,6 +3,9 @@
 This directory contains runnable scripts and prompt configs for the following paper:
 **CAREBench: Evaluating LLMs' Emotion Understanding by Assessing Cognitive Appraisal Reasoning**
 
+## Data
+Data are available on [Huggingface](https://huggingface.co/datasets/zhaoyuesun/CAREBecnch) under the CC-BY-NC-ND 4.0 license.
+
 
 ## Scripts
 
