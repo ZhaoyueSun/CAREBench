@@ -2,13 +2,14 @@
 """
 Usage:
   python scripts/baseline_vllm_with_cog_story.py \
-    --model lzw1008/Emollama-chat-13b \
+    --model Qwen/Qwen3.5-9B \
     --task all \
     --source_folder data/first_person \
-    --target_folder output/first_person/baseline_with_cog_story/Emollama-chat-13b/run_2 \
+    --target_folder output/first_person/baseline_with_cog_story/Qwen-3.5-9B/run_1 \
     --base_url http://localhost:8001 \
-    --num_threads 4 \
-    --max_tokens 512 \
+    --num_threads 10 \
+    --max_tokens 2048 \
+    --temperature 0.2 \
     --verbose false
 
 Notes:

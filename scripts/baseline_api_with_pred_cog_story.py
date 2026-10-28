@@ -17,7 +17,7 @@ Notes:
 - For each source sample <sample_id>.json, scenario is read from
     <pred-cog-story-folder>/<sample_id>.json -> final_scenario.
 - Existing output files will be skipped automatically.
-- Default output path: output/first_person/baseline_with_cog_story/<model>/<task>/<sample_id>.json
+- Default output path: output/first_person/baseline_with_pred_cog_story/<model>/<task>/<sample_id>.json
 """
 import argparse
 import json
@@ -733,7 +733,13 @@ def main() -> int:
     if args.target_folder:
         model_base_dir = Path(args.target_folder)
     else:
-        model_base_dir = repo_root / "output" / "first_person" / "baseline_with_cog_story" / model_name
+        model_base_dir = (
+            repo_root
+            / "output"
+            / "first_person"
+            / "baseline_with_pred_cog_story"
+            / model_name
+        )
 
     ensure_dir(model_base_dir)
 

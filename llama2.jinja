@@ -1,0 +1,23 @@
+{% set system_msg = '' %}
+{% if messages and messages[0]['role'] == 'system' %}
+  {% set system_msg = messages[0]['content'] %}
+  {% set loop_messages = messages[1:] %}
+{% else %}
+  {% set loop_messages = messages %}
+{% endif %}
+
+{% for m in loop_messages %}
+  {% if m['role'] == 'user' %}
+    {% if loop.index0 == 0 and system_msg %}
+<s>[INST] <<SYS>>
+{{ system_msg }}
+<</SYS>>
+
+{{ m['content'] }} [/INST]
+    {% else %}
+<s>[INST] {{ m['content'] }} [/INST]
+    {% endif %}
+  {% elif m['role'] == 'assistant' %}
+{{ m['content'] }}</s>
+  {% endif %}
+{% endfor %}

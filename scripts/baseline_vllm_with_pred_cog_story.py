@@ -2,14 +2,15 @@
 """
 Usage:
     python scripts/baseline_vllm_with_pred_cog_story.py \
-    --model lzw1008/Emollama-chat-13b \
+    --model Qwen/Qwen3.5-9B \
     --task all \
     --source_folder data/first_person \
-    --pred-cog-story-folder output/first_person/baseline/Emollama-chat-13b/run_2/pred-cog-stories \
-    --target_folder output/first_person/baseline_with_pred_cog_story/Emollama-chat-13b/run_2 \
+    --pred-cog-story-folder output/first_person/baseline/Qwen-3.5-9B/run_1/pred-cog-stories \
+    --target_folder output/first_person/baseline_with_pred_cog_story/Qwen-3.5-9B/run_1 \
     --base_url http://localhost:8001 \
-    --num_threads 4 \
-    --max_tokens 512 \
+    --num_threads 10 \
+    --max_tokens 2048 \
+    --temperature 0.2 \
     --verbose false
 
 Notes:
@@ -19,7 +20,7 @@ Notes:
 - For each source sample <sample_id>.json, scenario is read from
     <pred-cog-story-folder>/<sample_id>.json -> final_scenario.
 - Existing output files will be skipped automatically.
-- Default output path: output/first_person/baseline_with_cog_story/<model>
+- Default output path: output/first_person/baseline_with_pred_cog_story/<model>
 """
 import argparse
 import json
@@ -574,7 +575,13 @@ def main() -> int:
     if args.target_folder:
         model_base_dir = Path(args.target_folder)
     else:
-        model_base_dir = repo_root / "output" / "first_person" / "baseline_with_cog_story" / sanitize_model_name(model_name)
+        model_base_dir = (
+            repo_root
+            / "output"
+            / "first_person"
+            / "baseline_with_pred_cog_story"
+            / sanitize_model_name(model_name)
+        )
 
     ensure_dir(model_base_dir)
 

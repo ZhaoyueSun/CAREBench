@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Usage:
-  /home/ubuntu/anaconda3/bin/python scripts/evaluate_counterfactual_emotion.py \
+  python scripts/evaluate_counterfactual_emotion.py \
     --model Qwen-3.5-9B \
     --first_person_root data/first_person \
     --counterfactual_gold_root data/counterfactual \

@@ -2,12 +2,13 @@
 """
 Usage:
   python scripts/counterfactual_vllm.py \
-    --model lzw1008/Emollama-chat-13b \
+    --model Qwen/Qwen3.5-9B \
     --source_root data/counterfactual \
-    --target_root output/first_person/counterfactual/Emollama-chat-13b \
+    --target_root output/first_person/counterfactual/Qwen-3.5-9B \
     --base_url http://localhost:8001 \
-    --num_threads 4 \
+    --num_threads 10 \
     --max_tokens 512 \
+    --temperature 0.2 \
     --verbose false
 
 Notes:

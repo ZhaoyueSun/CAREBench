@@ -2,12 +2,14 @@
 """
 Usage:
     python scripts/baseline_vllm_with_single_core_appraisal.py \
-    --model GMLHUHE/PsyLLM-8B \
+    --model Qwen/Qwen3.5-9B \
     --task all \
     --source_folder data/first_person \
-    --target_folder output/first_person/baseline_with_single_core_appraisal/PsyLLM-8B/run_1 \
+    --target_folder output/first_person/baseline_with_single_core_appraisal/Qwen-3.5-9B/run_1 \
     --base_url http://localhost:8001 \
-    --num_threads 4 \
+    --num_threads 10 \
+    --max_tokens 2048 \
+    --temperature 0.2 \
     --verbose false
 
 Notes:

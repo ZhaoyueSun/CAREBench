@@ -5,9 +5,11 @@ Usage:
     --model Qwen/Qwen3.5-9B \
     --task all \
     --source_folder data/first_person \
-    --target_folder output/first_person/baseline_with_appraisal/Qwen-3.5-9B/ \
+    --target_folder output/first_person/baseline_with_appraisal/Qwen-3.5-9B/run_1 \
     --base_url http://localhost:8001 \
-    --num_threads 8 \
+    --num_threads 10 \
+    --max_tokens 2048 \
+    --temperature 0.2 \
     --verbose false
 
 Notes:

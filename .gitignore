@@ -1,0 +1,6 @@
+.DS_Store
+.env
+project_api_keys.toml
+__pycache__/
+*.py[cod]
+output/
