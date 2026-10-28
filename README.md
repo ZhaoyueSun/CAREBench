@@ -6,7 +6,7 @@ This repository provides the data-preparation, inference, evaluation, and visual
 
 ## Data
 
-The dataset is available on [Hugging Face](https://huggingface.co/datasets/zhaoyuesun/CAREBecnch) under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license. Download the two released JSON Lines files and place them under the project root as follows:
+The dataset is available on [Hugging Face](https://huggingface.co/datasets/zhaoyuesun/CAREBench) under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license. Download the two released JSON Lines files and place them under the project root as follows:
 
 ```text
 data/
